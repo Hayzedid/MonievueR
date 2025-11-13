@@ -26,12 +26,45 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
+// Root endpoint - API documentation
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: "🚀 FinHub Backend - AI-Powered Financial Analytics",
+    version: "1.0.0",
+    description: "Advanced OpenBanking backend with AI analytics, bank filtering, and Nigerian financial insights",
+    endpoints: {
+      "Authentication": "/auth",
+      "Banking Operations": "/bank",
+      "Account Management": "/accounts",
+      "Transactions": "/transactions",
+      "Balance Aggregation": "/aggregate/balance/:userId",
+      "AI Analytics": "/api/analytics",
+      "Bank Analytics": "/api/bank-analytics", 
+      "Advanced AI": "/api/advanced",
+      "AI Services": "/api/ai",
+      "User Management": "/api/users"
+    },
+    features: [
+      "🏦 Multi-bank analytics and comparison",
+      "🤖 AI-powered financial insights",
+      "💰 Health scoring and cashflow prediction",
+      "🎯 Savings suggestions and goal tracking",
+      "🇳🇬 Nigerian context (Owambe, local merchants)",
+      "📊 Real-time transaction analysis",
+      "🔒 Secure OpenBanking integration"
+    ],
+    status: "🟢 Live and Ready",
+    documentation: "Visit individual endpoints for detailed API docs"
+  });
+});
+
 // Routes
 app.use('/auth', authRoutes);
 app.use('/bank', bankRoutes);
 app.use('/accounts', accountsRoute);
 app.use('/transactions', transactionsRoute);
-app.use('/', aggregateRoute); // or '/aggregate'
+app.use('/aggregate', aggregateRoute);
 app.use('/api/ai', aiRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/advanced', advancedRoutes);
