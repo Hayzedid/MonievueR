@@ -1,21 +1,29 @@
 {
-  "name": "openbanking-backend",
+  "name": "monievue-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "FinHub Backend - AI-powered financial analytics with OpenBanking integration",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "build": "echo 'No build step required for Node.js backend' && npm install --production",
+    "postbuild": "echo 'Backend ready for deployment'",
     "seed": "node seeders/seedDatabase.js",
     "test": "mocha --timeout 10000 --exit",
     "test:watch": "mocha --watch --timeout 10000 --exit",
     "test:comprehensive": "mocha test/comprehensive.test.js --timeout 20000 --exit",
-    "test:all": "npm run test:comprehensive"
+    "test:all": "npm run test:comprehensive",
+    "production": "NODE_ENV=production node index.js",
+    "deploy": "npm run build && npm run production"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["fintech", "ai", "analytics", "openbanking", "nodejs", "express"],
+  "author": "Hayzedid",
   "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "axios": "^1.13.2",
     "body-parser": "^2.2.0",
