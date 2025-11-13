@@ -180,10 +180,10 @@ export const generateSavingsSuggestion = async (userId, days = 90) => {
 // Generate Savings Motivation
 const generateSavingsMotivation = (amount, currentRatio) => {
   const messages = [
-    `💰 Save ₦${amount.toLocaleString()} monthly and watch your money grow! Small steps, big results.`,
-    `🎯 Your target: ₦${amount.toLocaleString()} per month. You're currently saving ${currentRatio.toFixed(1)}% - let's improve!`,
-    `🌟 Consistency is key! ₦${amount.toLocaleString()} monthly savings will secure your future.`,
-    `💪 Challenge yourself: Save ₦${amount.toLocaleString()} monthly. Your future self will thank you!`
+    `Save ₦${amount.toLocaleString()} monthly and watch your money grow! Small steps, big results.`,
+    `Your target: ₦${amount.toLocaleString()} per month. You're currently saving ${currentRatio.toFixed(1)}% - let's improve!`,
+    `Consistency is key! ₦${amount.toLocaleString()} monthly savings will secure your future.`,
+    `Challenge yourself: Save ₦${amount.toLocaleString()} monthly. Your future self will thank you!`
   ];
   
   return messages[Math.floor(Math.random() * messages.length)];

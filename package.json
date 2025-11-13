@@ -1,7 +1,7 @@
 {
   "name": "monievue-backend",
   "version": "1.0.0",
-  "description": "FinHub Backend - AI-powered financial analytics with OpenBanking integration",
+  "description": "Monievue Backend - AI-powered financial analytics with OpenBanking integration",
   "main": "index.js",
   "type": "module",
   "scripts": {

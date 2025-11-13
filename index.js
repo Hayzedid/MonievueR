@@ -30,7 +30,7 @@ mongoose.connect(process.env.MONGODB_URI)
 app.get('/', (req, res) => {
   res.json({
     success: true,
-    message: "🚀 FinHub Backend - AI-Powered Financial Analytics",
+    message: "Monievue Backend - AI-Powered Financial Analytics",
     version: "1.0.0",
     description: "Advanced OpenBanking backend with AI analytics, bank filtering, and Nigerian financial insights",
     endpoints: {
@@ -46,15 +46,15 @@ app.get('/', (req, res) => {
       "User Management": "/api/users"
     },
     features: [
-      "🏦 Multi-bank analytics and comparison",
-      "🤖 AI-powered financial insights",
-      "💰 Health scoring and cashflow prediction",
-      "🎯 Savings suggestions and goal tracking",
-      "🇳🇬 Nigerian context (Owambe, local merchants)",
-      "📊 Real-time transaction analysis",
-      "🔒 Secure OpenBanking integration"
+      "Multi-bank analytics and comparison",
+      "AI-powered financial insights",
+      "Health scoring and cashflow prediction",
+      "Savings suggestions and goal tracking",
+      "Nigerian context (Owambe, local merchants)",
+      "Real-time transaction analysis",
+      "Secure OpenBanking integration"
     ],
-    status: "🟢 Live and Ready",
+    status: "Live and Ready",
     documentation: "Visit individual endpoints for detailed API docs"
   });
 });
@@ -75,14 +75,14 @@ app.use('/api/bank-analytics', bankAnalyticsRoutes);
 const PORT = process.env.PORT || 3000;
 if (process.env.NODE_ENV !== 'test') {
   app.listen(PORT, () => {
-    console.log(`🚀 FinHub Backend with Advanced AI Analytics running on port ${PORT}`);
-    console.log(`📊 Analytics API: http://localhost:${PORT}/api/analytics`);
-    console.log(`🏦 Bank Analytics: http://localhost:${PORT}/api/bank-analytics`);
-    console.log(`🧠 Advanced AI: http://localhost:${PORT}/api/advanced`);
-    console.log(`🤖 AI API: http://localhost:${PORT}/api/ai`);
-    console.log(`👥 Users API: http://localhost:${PORT}/api/users`);
-    console.log(`🔐 Auth API: http://localhost:${PORT}/auth`);
-    console.log(`🏦 Banking API: http://localhost:${PORT}/bank`);
+    console.log(`Monievue Backend with Advanced AI Analytics running on port ${PORT}`);
+    console.log(`Analytics API: http://localhost:${PORT}/api/analytics`);
+    console.log(`Bank Analytics: http://localhost:${PORT}/api/bank-analytics`);
+    console.log(`Advanced AI: http://localhost:${PORT}/api/advanced`);
+    console.log(`AI API: http://localhost:${PORT}/api/ai`);
+    console.log(`Users API: http://localhost:${PORT}/api/users`);
+    console.log(`Auth API: http://localhost:${PORT}/auth`);
+    console.log(`Banking API: http://localhost:${PORT}/bank`);
   });
 }
 

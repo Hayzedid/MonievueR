@@ -55,15 +55,15 @@ export async function syncAllAccounts(userId, mockAccounts) {
  */
 async function sendTransactionsToBackend2(userId, transactions) {
   try {
-    const backend2URL = 'http://localhost:5000/api/transactions'; // ✅ change to deployed link later
+    const backend2URL = 'http://localhost:5000/api/transactions'; // change to deployed link later
 
     const response = await axios.post(backend2URL, {
       userId,
       transactions,
     });
 
-    console.log('✅ Synced with Backend 2:', response.data);
+    console.log('Synced with Backend 2:', response.data);
   } catch (err) {
-    console.error('❌ Error sending to Backend 2:', err.message);
+    console.error('Error sending to Backend 2:', err.message);
   }
 }
