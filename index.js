@@ -15,7 +15,6 @@ import aggregateRoute from './routes/aggregate.js';
 import aiRoutes from './routes/aiRoutes.js';
 import analyticsRoutes from './routes/analytics.js';
 import advancedRoutes from './routes/advancedRoutes.js';
-import testRoutes from './routes/testRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import bankAnalyticsRoutes from './routes/bankAnalyticsRoutes.js';
 
@@ -36,7 +35,6 @@ app.use('/', aggregateRoute); // or '/aggregate'
 app.use('/api/ai', aiRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/advanced', advancedRoutes);
-app.use('/api/test', testRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/bank-analytics', bankAnalyticsRoutes);
 
@@ -50,7 +48,6 @@ if (process.env.NODE_ENV !== 'test') {
     console.log(`🧠 Advanced AI: http://localhost:${PORT}/api/advanced`);
     console.log(`🤖 AI API: http://localhost:${PORT}/api/ai`);
     console.log(`👥 Users API: http://localhost:${PORT}/api/users`);
-    console.log(`🧪 Test API: http://localhost:${PORT}/api/test`);
     console.log(`🔐 Auth API: http://localhost:${PORT}/auth`);
     console.log(`🏦 Banking API: http://localhost:${PORT}/bank`);
   });
